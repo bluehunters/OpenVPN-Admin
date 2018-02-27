@@ -54,6 +54,7 @@ Only tested on Debian Jessie. Feel free to open issues.
         $ git clone https://github.com/Chocobozzz/OpenVPN-Admin openvpn-admin
         $ cd openvpn-admin
         # ./install.sh www_base_dir web_user web_group
+     
 
   * Setup the web server (Apache, NGinx...) to serve the web application.
   * Create the admin of the web application by visiting `http://your-installation/index.php?installation`
@@ -66,7 +67,8 @@ Only tested on Debian Jessie. Feel free to open issues.
   * User get the configurations files via the web application (and put them in */etc/openvpn*)
   * Users on GNU/Linux systems, run `chmod +x /etc/openvpn/update-resolv.sh` as root
   * User run OpenVPN (for example `systemctl start openvpn@client`)
-
+  * goto internet （route add -net 10.8.0.0/24 gw x.x.x.x）,add default route.
+  *
 ## Update
 
     $ git pull origin master
